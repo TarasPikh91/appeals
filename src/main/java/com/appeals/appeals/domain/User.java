@@ -1,5 +1,6 @@
 package com.appeals.appeals.domain;
 
+import com.appeals.appeals.dto.UserDto;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -60,6 +61,10 @@ public class User implements UserDetails {
         this.email = email;
         this.phone = phone;
         this.userRole = userRole;
+    }
+
+    public UserDto convertToDto() {
+        return new UserDto(this.id, this.username, this.fullUsername, this.password, this.email, this.phone, this.locked, this.isEnabled, this.userRole, this.appeals);
     }
 
     @Override
