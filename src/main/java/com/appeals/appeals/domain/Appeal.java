@@ -62,10 +62,11 @@ public class  Appeal {
         this.id = appealDto.getId();
         this.appealDate = appealDto.getAppealDate();
         this.appealText = appealDto.getAppealText();
+        this.user = appealDto.getUser();
     }
 
     public AppealDto toAppealDto() {
-        return new AppealDto(this.id, this.appealDate, this.appealText);
+        return new AppealDto(this.id, this.appealDate, this.appealText, this.user);
     }
 
     public Long getId() {

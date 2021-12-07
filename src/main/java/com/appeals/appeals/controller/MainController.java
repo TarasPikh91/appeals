@@ -19,7 +19,7 @@ public class MainController {
 
     @GetMapping("/")
     public String mainPage(Model model) {
-//        model.addAttribute("appeals", appealApp.getAppeals());
+        model.addAttribute("appeals", appealApp.getAppeals());
          return "/main";
     }
 
@@ -32,5 +32,11 @@ public class MainController {
     public String saveAppeal(@ModelAttribute Appeal appeal) {
         appealApp.saveAppeal(appeal.toAppealDto());
         return "/main";
+    }
+
+    @GetMapping("/appeals")
+    public String getAppeals(Model model) {
+        model.addAttribute("appeals", appealApp.getAppeals());
+        return "/appeals";
     }
 }

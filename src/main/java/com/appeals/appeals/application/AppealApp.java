@@ -1,12 +1,15 @@
 package com.appeals.appeals.application;
 
 import com.appeals.appeals.domain.Appeal;
+import com.appeals.appeals.domain.User;
 import com.appeals.appeals.dto.AppealDto;
 import com.appeals.appeals.repository.AppealRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -20,6 +23,8 @@ public class AppealApp {
 
     public void saveAppeal(final AppealDto appealDto) {
         appealDto.setAppealDate(new Date());
+        final User loggedInUser = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        appealDto.setUser(loggedInUser);
         appealRepository.save(new Appeal(appealDto));
     }
 
