@@ -1,6 +1,5 @@
 package com.appeals.appeals.domain;
 
-import com.appeals.appeals.domain.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -23,15 +21,9 @@ import java.time.LocalDateTime;
 @Table(name = "confirmation_token")
 public class ConfirmationToken {
 
-//    @SequenceGenerator(
-//            name = "confirmation_token_sequence",
-//            sequenceName = "confirmation_token_sequence",
-//            allocationSize = 1
-//    )
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
-//            generator = "confirmation_token_sequence"
     )
     private Long id;
     @Column(nullable = false)
