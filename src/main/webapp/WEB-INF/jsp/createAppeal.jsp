@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Create Appeal</title>
+    <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body>
+<jsp:include page="templates/_header.jsp"/>
 <div>
     <div>Create New Appeal</div>
     <div>

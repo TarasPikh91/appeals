@@ -10,8 +10,11 @@
 <html>
 <head>
     <title>Appeals</title>
+    <link href="css/main.css" rel="stylesheet"/>
+
 </head>
 <body>
+<jsp:include page="templates/_header.jsp"/>
 <table>
   <thead>
     <tr>
