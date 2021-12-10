@@ -8,9 +8,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Sign Up</title>
 </head>
-<body>§
+<body>
+<div>
+    <form method="post">
+        <span>Full Username:</span>
+        <input type="text" name="fullUsername">
 
+        <span>Username:</span>
+        <input type="text" name="username">
+
+        <span>Email:</span>
+        <input type="email" name="email">
+
+        <span>Password:</span>
+        <input type="password" name="password">
+
+        <span>Phone:</span>
+        <input type="text" name="phone">
+
+        <input type="submit" value="Sign Up">
+    </form>
+</div>
 </body>
 </html>

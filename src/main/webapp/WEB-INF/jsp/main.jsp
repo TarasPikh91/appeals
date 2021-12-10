@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <div>Home</div>
+    <div><a href="/">Home</a></div>
     <div><a href="create_appeal">Create New Appeal</a></div>
     <div>My Appeals</div>
     <div>Sign Up</div>
