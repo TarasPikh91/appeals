@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: taras.pikh
@@ -8,13 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Create Appeal</title>
+    <title><spring:message code="message.create_new_appeal.label"/></title>
     <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body>
 <jsp:include page="templates/_header.jsp"/>
 <div>
-    <div>Create New Appeal</div>
+    <div><spring:message code="message.create_new_appeal.label"/></div>
     <div>
         <form action="save_appeal" method="post">
             <textarea name="appealText" value=""></textarea>

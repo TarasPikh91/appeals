@@ -2,6 +2,7 @@ package com.appeals.appeals.controller;
 
 import com.appeals.appeals.application.AppealApp;
 import com.appeals.appeals.domain.Appeal;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MainController {
 
     private final AppealApp appealApp;
+    private final MessageSource messageSource;
 
-    public MainController(AppealApp appealApp) {
+    public MainController(AppealApp appealApp, MessageSource messageSource) {
         this.appealApp = appealApp;
+        this.messageSource = messageSource;
     }
 
     @GetMapping("/")

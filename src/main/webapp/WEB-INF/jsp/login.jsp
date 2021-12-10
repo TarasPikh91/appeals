@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: taras.pikh
@@ -13,19 +14,19 @@
 </head>
 <body>
     <div c:if="${param.error}">
-        Invalid username and password.
+        <spring:message code="message.invalid_data.message"/>
     </div>
     <div c:if="${param.logout}">
-        You have been logged out.
+        <spring:message code="message.success_log_in.message"/>
     </div>
     <form c:action="@{/login}" method="post">
-        <div><label> User Name : <input type="text" name="username"/> </label></div>
-        <div><label> Password: <input type="password" name="password"/> </label></div>
+        <div><label><spring:message code="message.user_name.label"/><input type="text" name="username"/> </label></div>
+        <div><label><spring:message code="message.password.label"/><input type="password" name="password"/> </label></div>
         <div><input type="submit" value="Sign In"/></div>
     </form>
 
     <div>
-        <a href="@{/signUp}">Sign Up</a>
+        <a href="@{/signUp}"><spring:message code="message.sign_up.label"/></a>
     </div>
 </body>
 </html>

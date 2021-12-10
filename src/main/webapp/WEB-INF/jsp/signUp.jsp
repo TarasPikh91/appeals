@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: taras.pikh
@@ -8,27 +9,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Sign Up</title>
+    <title><spring:message code="message.sign_up.label"/></title>
+    <spring:message code="message.sign_up.label" var="signup"/>
 </head>
 <body>
 <div>
     <form method="post">
-        <span>Full Username:</span>
+        <span><spring:message code="message.full_username.label"/></span>
         <input type="text" name="fullUsername">
 
-        <span>Username:</span>
+        <span><spring:message code="message.user_name.label"></span>
         <input type="text" name="username">
 
-        <span>Email:</span>
+        <span><spring:message code="message.email.label"/></span>
         <input type="email" name="email">
 
-        <span>Password:</span>
+        <span><spring:message code="message.password.label"/></span>
         <input type="password" name="password">
 
-        <span>Phone:</span>
+        <span><spring:message code="message.phone.label"/></span>
         <input type="text" name="phone">
 
-        <input type="submit" value="Sign Up">
+        <input type="submit" value="${signup}">
     </form>
 </div>
 </body>
