@@ -18,6 +18,11 @@ public class LoginController {
         return "/signUp";
     }
 
+    @GetMapping("/login")
+    public String getLogInPage() {
+        return "/login";
+    }
+
     @PostMapping("/login")
     public String loginSuccess() {
         return "/main";
