@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Log In</title>
+    <title>Log In test</title>
 </head>
 <body>
     <div c:if="${param.error}">
@@ -20,13 +20,14 @@
         <spring:message code="message.success_log_in.message"/>
     </div>
     <form c:action="@{/login}" method="post">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
         <div><label><spring:message code="message.user_name.label"/><input type="text" name="username"/> </label></div>
         <div><label><spring:message code="message.password.label"/><input type="password" name="password"/> </label></div>
         <div><input type="submit" value="Sign In"/></div>
     </form>
 
     <div>
-        <a href="@{/signUp}"><spring:message code="message.sign_up.label"/></a>
+        <a href="registration/signUp"><spring:message code="message.sign_up.label"/></a>
     </div>
 </body>
 </html>

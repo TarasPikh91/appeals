@@ -63,6 +63,15 @@ public class User implements UserDetails {
         this.userRole = userRole;
     }
 
+    public User(final UserDto userDto) {
+        this.username = userDto.getUsername();
+        this.fullUsername = userDto.getFullUsername();
+        this.password = userDto.getPassword();
+        this.email = userDto.getEmail();
+        this.phone = userDto.getPhone();
+        this.userRole = userDto.getUserRole();
+    }
+
     public UserDto convertToDto() {
         return new UserDto(this.id, this.username, this.fullUsername, this.password, this.email, this.phone, this.locked, this.isEnabled, this.userRole, this.appeals);
     }
