@@ -1,6 +1,9 @@
 package com.appeals.appeals.domain;
 
 import com.appeals.appeals.dto.AppealDto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +17,10 @@ import javax.persistence.Table;
 import java.util.Date;
 import java.util.Objects;
 
+@Getter
+@Setter
 @Entity
+@AllArgsConstructor
 @Table(name = "appeal_data")
 public class  Appeal {
 
@@ -51,8 +57,7 @@ public class  Appeal {
 
     }
 
-    public Appeal(Long id, Date appealDate, String appealText, User user) {
-        this.id = id;
+    public Appeal(Date appealDate, String appealText, User user) {
         this.appealDate = appealDate;
         this.appealText = appealText;
         this.user = user;
@@ -67,37 +72,5 @@ public class  Appeal {
 
     public AppealDto toAppealDto() {
         return new AppealDto(this.id, this.appealDate, this.appealText, this.user);
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Date getAppealDate() {
-        return appealDate;
-    }
-
-    public void setAppealDate(Date appealDate) {
-        this.appealDate = appealDate;
-    }
-
-    public String getAppealText() {
-        return appealText;
-    }
-
-    public void setAppealText(String appealText) {
-        this.appealText = appealText;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }

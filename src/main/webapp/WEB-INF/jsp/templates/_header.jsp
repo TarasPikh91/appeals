@@ -4,7 +4,11 @@
     <div><a href="/"><spring:message code="message.home.label"/></a></div>
     <div><a href="create_appeal"><spring:message code="message.create_appeal.label"/></a></div>
     <div><a href="appeals"><spring:message code="message.my_appeals.label"/></a></div>
-    <c:if test="${sessionScope.get('userLoggedIn') == null}">
-        <div><a href="signup"><spring:message code="message.sign_up.label"/></a></div>
-    </c:if>
+    <div sec:authorize="isAuthenticated()">
+        <div>
+           <a href="${pageContext.request.contextPath}/logout?${_csrf.parameterName}=${_csrf.token}">
+               <spring:message code="message.log_out.label"/>
+           </a>
+        </div>
+    </div>
 </div>

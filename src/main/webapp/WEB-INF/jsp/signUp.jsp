@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: taras.pikh
@@ -14,21 +15,28 @@
 </head>
 <body>
 <div>
-    <form method="post">
-        <span><spring:message code="message.full_username.label"/></span>
-        <input type="text" name="fullUsername">
-
-        <span><spring:message code="message.user_name.label"></span>
-        <input type="text" name="username">
-
-        <span><spring:message code="message.email.label"/></span>
-        <input type="email" name="email">
-
-        <span><spring:message code="message.password.label"/></span>
-        <input type="password" name="password">
-
-        <span><spring:message code="message.phone.label"/></span>
-        <input type="text" name="phone">
+    <form method="POST" form:action="@{registration/signUp}">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        <div>
+            <span><spring:message code="message.full_username.label"/></span>
+            <input type="text" name="fullUsername">
+        </div>
+        <div>
+            <span><spring:message code="message.user_name.label"/></span>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <span><spring:message code="message.email.label"/></span>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <span><spring:message code="message.password.label"/></span>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <span><spring:message code="message.phone.label"/></span>
+            <input type="text" name="phone">
+        </div>
 
         <input type="submit" value="${signup}">
     </form>

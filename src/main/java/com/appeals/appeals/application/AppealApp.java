@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -30,5 +29,9 @@ public class AppealApp {
 
     public List<AppealDto> getAppeals() {
         return appealRepository.findAll().stream().map((Appeal appeal) -> appeal.toAppealDto()).collect(Collectors.toList());
+    }
+
+    public void deleteAppeal(final Long id) {
+        appealRepository.deleteAppealById(id);
     }
 }
