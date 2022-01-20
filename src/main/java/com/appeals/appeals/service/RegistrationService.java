@@ -80,9 +80,8 @@ public class RegistrationService {
         "                         <tr> "+
         "                                   <td width='https://pages.customertimes.com/rs/055-AWU-851/images/second_row.png' style='line-height:1px;font-size:1px;'>&nbsp;</td> "+
         "                                   <td> "+
-        "                                     <div class='hero_text mktoText' mktoname='first hero' id='first_hero_text' style='line-height: 16; text-align: center; font-size: 12px'>" +
-        "                                       <p><span style='color: #000000;'>He scales large projects in a single bound and wields his programming framework skills to architect any solution on-demand.</span></p>"+
-        "                                     </div> </td> "+
+        "                                    test email template  " +
+                                            "</td> "+
         "                                   <td width='43' style='line-height:1px;font-size:1px;'>&nbsp;</td> "+
         "                                 </tr> "+
         "                               </tbody> "+
