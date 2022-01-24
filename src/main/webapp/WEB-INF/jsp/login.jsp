@@ -19,9 +19,9 @@
     <div c:if="${param.logout}">
         <spring:message code="message.success_log_in.message"/>
     </div>
-    <form c:action="@{/login}" method="post">
+    <form c:action="@{/login}" method="POST">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-        <div><label><spring:message code="message.user_name.label"/><input type="text" name="username"/> </label></div>
+        <div><label><spring:message code="message.email.label"/><input type="text" name="username"/> </label></div>
         <div><label><spring:message code="message.password.label"/><input type="password" name="password"/> </label></div>
         <div><input type="submit" value="Sign In"/></div>
     </form>
