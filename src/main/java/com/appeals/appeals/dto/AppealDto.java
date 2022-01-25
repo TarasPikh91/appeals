@@ -1,9 +1,13 @@
 package com.appeals.appeals.dto;
 
 import com.appeals.appeals.domain.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Getter
+@Setter
 public class AppealDto {
 
     private Long id;
@@ -15,38 +19,6 @@ public class AppealDto {
         this.id = id;
         this.appealDate = appealDate;
         this.appealText = appealText;
-        this.user = user;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Date getAppealDate() {
-        return appealDate;
-    }
-
-    public void setAppealDate(Date appealDate) {
-        this.appealDate = appealDate;
-    }
-
-    public String getAppealText() {
-        return appealText;
-    }
-
-    public void setAppealText(String appealText) {
-        this.appealText = appealText;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
         this.user = user;
     }
 }
