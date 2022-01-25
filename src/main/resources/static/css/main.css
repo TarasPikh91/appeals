@@ -1,0 +1,22 @@
+div.header-block > div {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.header-block {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.appeals-block {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+tr > td {
+    width: 10%;
+}
