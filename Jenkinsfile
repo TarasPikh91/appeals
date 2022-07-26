@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'apach-maven-3.5.4'
+    }
+    
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -18,6 +22,13 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "Hello Person: ${params.PERSON}"
+            }
+        }
+        
+        stage('build') {
+            steps {
+                echo 'build stage'
+                sh 'mvn --version'
             }
         }
     }
