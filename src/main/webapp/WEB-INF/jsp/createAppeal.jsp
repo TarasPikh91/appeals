@@ -14,7 +14,7 @@
 </head>
 <body>
 <jsp:include page="templates/_header.jsp"/>
-<div>
+<div class="create_appeal_block">
     <div><spring:message code="message.create_new_appeal.label"/></div>
     <div>
         <form action="save_appeal" method="post">
